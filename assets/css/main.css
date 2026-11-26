@@ -1659,3 +1659,56 @@ input, select, textarea {
 		body.is-preload #footer {
 			opacity: 0;
 		}
+
+		/* Botón de cambio de idioma */
+.lang-switch {
+    position: fixed;
+    top: 24px;
+    right: 28px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: rgba(15, 18, 25, 0.55);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 999px;
+    font-size: 0.75rem;
+    letter-spacing: 0.15rem;
+}
+
+.lang-switch i {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.85rem;
+}
+
+.lang-btn {
+    border-bottom: none !important;
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.lang-btn:hover,
+.lang-btn.active {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.lang-sep {
+    color: rgba(255, 255, 255, 0.25);
+    user-select: none;
+}
+
+/* Desenfoque de la imagen de fondo */
+#bg:after {
+    filter: blur(5px);
+    transform: scale(1.05); /* Evita que aparezcan bordes blancos por el blur */
+}
+
+/* Capa oscura encima del fondo para mejorar el contraste del texto */
+#bg:before {
+    background-color: rgba(10, 12, 18, 0.55);
+}
